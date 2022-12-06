@@ -8,8 +8,8 @@ namespace Encapsulation
 {
     internal class Car : Vehicle
     {
-        public Car(string registration, string colour, string make, string model, int noOfWheels)
-        : base(registration, colour, make, model, noOfWheels)
+        public Car(string registration, string colour, string make, string model)
+        : base(registration, colour, make, model, 4)
         {
 
         }
