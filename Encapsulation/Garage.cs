@@ -22,5 +22,35 @@ namespace Encapsulation
             Drivers = new List<Driver>();
             Cars = new List<Car>();
         }
+
+        public Driver? GetDriver(string licence)
+        {
+            foreach (var driver in Drivers)
+            {
+                if (driver.LicenceNumber == licence)
+                {
+                    return driver;
+
+                }
+            }
+
+            return null;
+
+        } 
+        
+        public Car? GetCar(string reg)
+        {
+            foreach (var car in Cars)
+            {
+                if (car.Registration == reg)
+                {
+                    return car;
+
+                }
+            }
+
+            return null;
+
+        }
     }
 }
