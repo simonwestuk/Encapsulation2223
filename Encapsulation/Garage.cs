@@ -11,12 +11,16 @@ namespace Encapsulation
         public string Name { get; set; }
         public string Address { get; set; }
         public List<Booking> Bookings { get; set; }
+        public List<Driver> Drivers { get; set; }
+        public List<Car> Cars { get; set; }
 
         public Garage(string name, string address)
         {
             Name = name;
             Address = address;
             Bookings = new List<Booking>();
+            Drivers = new List<Driver>();
+            Cars = new List<Car>();
         }
     }
 }

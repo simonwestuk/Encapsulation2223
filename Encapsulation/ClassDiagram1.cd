@@ -8,14 +8,14 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Encapsulation.Booking">
-    <Position X="13.5" Y="3.25" Width="1.5" />
+    <Position X="13.5" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAAAAEAAACAAAABAAAAAAAAQAAAAAAAAA=</HashCode>
       <FileName>Booking.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Encapsulation.Garage">
-    <Position X="9" Y="3" Width="1.5" />
+    <Position X="8.5" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAgAAAAAAAAAAQAAAAAAAACAAAAAAAAAAA=</HashCode>
       <FileName>Garage.cs</FileName>
@@ -32,7 +32,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Encapsulation.Program">
-    <Position X="14" Y="7.25" Width="1.5" />
+    <Position X="13.25" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
@@ -56,7 +56,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="System.Collections.Generic.List&lt;T&gt;" Collapsed="true">
-    <Position X="11" Y="4.75" Width="1.5" />
+    <Position X="11" Y="5.25" Width="1.5" />
     <NestedTypes>
       <Class Name="System.Collections.Generic.List&lt;T&gt;.Enumerator" Collapsed="true">
         <TypeIdentifier />
