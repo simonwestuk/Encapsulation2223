@@ -52,5 +52,21 @@ namespace Encapsulation
             return null;
 
         }
+
+
+        public Booking? GetBooking(string num)
+        {
+            foreach (var booking in Bookings)
+            {
+                if (booking.Id.ToString() == num)
+                {
+                    return booking;
+
+                }
+            }
+
+            return null;
+
+        }
     }
 }

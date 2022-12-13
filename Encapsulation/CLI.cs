@@ -39,6 +39,74 @@ namespace Encapsulation
         {
             Console.WriteLine($"Bookings Manager");
             Console.WriteLine("---------------");
+
+            string manage = Prompt.Select("Select your option", new[] { "Add New Booking", "View Bookings", "Delete Booking" });
+
+            switch (manage)
+            {
+                case "Add New Booking":
+
+                    Console.Clear();
+                    string registraionNum = Prompt.Input<string>("Enter registration number:");
+                    Car? currentCar = garage.GetCar(registraionNum);
+
+                    if (currentCar != null)
+                    {
+
+                        string type = Prompt.Input<string>("Enter type/description:");
+                        int d = Prompt.Input<int>("Enter day:");
+                        int M = Prompt.Input<int>("Enter month:");
+                        int y = Prompt.Input<int>("Enter year:");
+                        int h = Prompt.Input<int>("Enter hour:");
+                        int m = Prompt.Input<int>("Enter mins:");
+                        Booking booking = new Booking(currentCar, type, new DateTime(y, M, d, h, m, 0));
+                        Console.WriteLine($"Booking added: \n { booking } ");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Car not found.");
+                    }
+
+                    Console.ReadLine();
+                    Console.WriteLine("Prease any key to return to main menu.");
+                    MainMenu();
+                    break;
+
+                case "View Bookings":
+                    Console.Clear();
+                    foreach (var item in garage.Bookings)
+                    {
+                        Console.WriteLine(item);
+                        Console.WriteLine("--------------------");
+                    }
+                    Console.ReadLine();
+                    Console.WriteLine("Prease any key to return to main menu.");
+                    MainMenu();
+                    break;
+
+                case "Delete Driver":
+                    Console.Clear();
+                    string bookinNum = Prompt.Input<string>("Enter booking number:");
+                    Booking? current = garage.GetBooking(bookinNum);
+
+                    if (current != null)
+                    {
+                        garage.Bookings.Remove(current);
+                        Console.WriteLine("Booking removed.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Booking not found.");
+                    }
+
+                    Console.ReadLine();
+                    Console.WriteLine("Prease any key to return to main menu.");
+                    MainMenu();
+                    break;
+
+                default:
+                    break;
+            }
         }
 
 
